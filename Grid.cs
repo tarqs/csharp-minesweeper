@@ -11,7 +11,11 @@ namespace Minesweeper
     public class Grid : Form
     {
         static int bombAmount;
+        private readonly int size = 8;
         public Cell[][] griddy = new Cell[8][];
+        for (int i = 0; i < size; i += 1) {
+            griddy[i] = new Cell[size];
+        }
         Random rand1 = new Random();
         int chance;
 
